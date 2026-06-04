@@ -1,34 +1,35 @@
-# פרויקט: בוט שירות אינטראקטיבי מבוסס Gemini API
+# Project: Interactive Service Bot powered by Gemini API
 
-## תיאור הפרויקט
-מערכת זו מהווה פרויקט גמר המיישם עבודה עם מודלי שפה גדולים (Gemini API). הבוט מנהל שיחה אינטראקטיבית עם המשתמש בתחום שירות נבחר, תוך שמירה על הקשר (Context) והיסטוריית השיחה. המערכת כוללת ניתוח סנטימנט רגשי המופעל בסיום השיחה, אחסון נתונים בפורמט JSON, והצגת תובנות ויזואליות על איכות השירות באמצעות ספריית Matplotlib.
+## Project Description
+This system is a final project implementing the use of Large Language Models (Gemini API). The bot conducts an interactive conversation with the user in a selected service domain, while maintaining context and conversation history. The system includes emotional sentiment analysis performed at the end of the conversation, data storage in JSON format, and visualization of service quality insights using the Matplotlib library.
 
-## דרישות טכניות מיושמות
-* **ניהול מחלקות:** מימוש מחלקת `ServiceManager` המרכזת את הלוגיקה, התקשורת עם ה-API, וניהול הנתונים.
-* **תקשורת:** שימוש ב-Google Gemini API לניהול דיאלוג חכם.
-* **עיבוד נתונים:**
-    * שימוש ב-`List of Dictionaries` לשמירת היסטוריית השיחה.
-    * שימוש ב-`List/Dictionary Comprehensions` לצורך יעילות וניתוח טקסט.
-    * שימוש ב-`Iterator/Generator` למעבר על היסטוריית השיחה.
-    * פונקציית `calculate_sentiment` לניתוח טקסט מבוסס מילון מותאם אישית (Normalization, ניקוי פיסוק).
-* **אחסון:** שמירה וטעינה של קבצי JSON המכילים את פרטי השיחה.
-* **טיפול בשגיאות:** הטמעת מנגנוני `try-except` לטיפול בתקלות תקשורת ושגיאות קריאה/כתיבה לקבצים.
-* **ויזואליזציה:** הפקת גרפים להצגת מגמת הסנטימנט והשוואת טונים בין המשתמש לבוט.
+## Technical Requirements Implemented
+* **Class Management:** Implementation of the `ServiceManager` class, which centralizes logic, communication with the API, and data management.
+* **Communication:** Use of the Google Gemini API for intelligent dialogue management.
+* **Data Processing:**
+    * Use of `List of Dictionaries` to store conversation history.
+    * Use of `List/Dictionary Comprehensions` for efficiency and text analysis.
+    * Use of `Iterator/Generator` to traverse the conversation history.
+    * Development of the `calculate_sentiment` function for text analysis based on a custom dictionary (Normalization, punctuation cleaning).
+* **Storage:** Saving and loading JSON files containing conversation details.
+* **Error Handling:** Implementing `try-except` mechanisms to handle communication faults and file read/write errors.
+* **Visualization:** Generating graphs to display sentiment trends and compare tones between the user and the bot.
 
-## מבנה המערכת
-1. **ServiceManager:** המחלקה הראשית לניהול מחזור חיי הבוט.
-2. **API Handler:** פונקציות תקשורת עם המודל.
-3. **Data Persistence:** ניהול קבצי JSON.
-4. **Analytics:** ניתוח סנטימנט והצגת נתונים גרפיים.
+## System Architecture
+1. **ServiceManager:** The main class for managing the bot's lifecycle.
+2. **API Handler:** Functions for communication with the model.
+3. **Data Persistence:** JSON file management.
+4. **Analytics:** Sentiment analysis and graphical data presentation.
 
-## הוראות הפעלה
-1. הגדירו את מפתח ה-API שלכם ב-Google AI Studio.
-2. הריצו את ה-Notebook בסביבת Jupyter.
-3. אתחלו את המחלקה `ServiceManager` והתחילו בשיחה.
-4. בסיום, השתמשו בפונקציות הטעינה והניתוח כדי לצפות בגרפים ובסיכום השיחה.
+## Usage Instructions
+1. Configure your API key in Google AI Studio.
+2. Run the Notebook in a Jupyter environment.
+3. Initialize the `ServiceManager` class and start the conversation.
+4. Upon completion, use the load and analysis functions to view graphs and the conversation summary.
 
-## דרישות קדם
+## Prerequisites
 * Python 3.x
-* ספריות: `google-generativeai`, `matplotlib`, `json`, `re`.
+* Libraries: `google-generativeai`, `matplotlib`, `json`, `re`.
 
---
+---
+*Note: This file is intended to serve as technical documentation for the final project.*
