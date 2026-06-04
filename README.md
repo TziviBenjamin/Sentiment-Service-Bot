@@ -21,11 +21,12 @@ This system is a final project implementing the use of Large Language Models (Ge
 3. **Data Persistence:** JSON file management.
 4. **Analytics:** Sentiment analysis and graphical data presentation.
 
-## Usage Instructions
-1. Configure your API key in Google AI Studio.
-2. Run the Notebook in a Jupyter environment.
-3. Initialize the `ServiceManager` class and start the conversation.
-4. Upon completion, use the load and analysis functions to view graphs and the conversation summary.
+## How to Run
+1. Open the recipes.ipynb in Jupyter Notebook or VS Code.
+2. Ensure you have a valid Google Gemini API Key configured.
+3. Run the cells to start the interactive chat.
+4. Type your messages and end the chat by typing "exit" or "quit".
+5. View the generated JSON log and the analytical graphs at the end of the notebook.
 
 ## Prerequisites
 * Python 3.x
